@@ -1,0 +1,7 @@
+describe('<%= className %> ', function () {
+	SpecHelper.JSEPackage.importAndWaitFor('<%= className %>');
+
+	it('should be defined', function () {
+		expect(<%= className %>).toBeDefined();
+	});
+});
