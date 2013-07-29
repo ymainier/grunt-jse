@@ -21,8 +21,11 @@ module.exports = function(grunt) {
 	}
 
 	function createFile(className, templateName, pathPrefix, pathSuffix) {
+		var cwd = process.cwd();
 		// Get template
+		grunt.file.setBase(path.join(__dirname, '..'));
 		var importTemplate = grunt.file.read(templateName);
+		grunt.file.setBase(cwd);
 		// Fill it with data
 		var importContent = grunt.template.process(importTemplate, {
 			data: {
