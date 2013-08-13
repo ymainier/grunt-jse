@@ -41,14 +41,14 @@ grunt.initConfig({
 
 #### options.srcDir
 Type: `String`
-Default value: `'test/spec'`
+Default value: `'src'`
 
 A string value that is used as a base path for the src directory of the
 JSE modules.
 
 #### options.specDir
 Type: `String`
-Default value: `'src'`
+Default value: `'test/spec'`
 
 A string value that is used as a base path for the jasmine spec directory of the JSE modules.
 
@@ -60,7 +60,6 @@ In this exemple, we generate files for the class named `Awesome.Module`
 
 1. Add this configuration in your Gruntfile.js (inside the
 	 `grunt.initConfig` block)
-
 ```js
 grunt.initConfig({
   jse: {
@@ -72,30 +71,30 @@ grunt.initConfig({
   },
 })
 ```
-
 2. Type in the following command
-
 ```js
 grunt jse --class=Awesome.Module
 ```
 
 ### Command line options
 
+All those options are boolean, you should use `--singleton=true` instead of `--singleton` (there is a bug with the `nopt` module version in `grunt`).
+
 #### Generate a singleton module
 
 ```js
-grunt jse --class=Awesome.Module --singleton
+grunt jse --class=Awesome.Module --singleton=true
 ```
 
 #### Skip the module file (only generate test files)
 
 ```js
-grunt jse --class=Awesome.Module --skip-src
+grunt jse --class=Awesome.Module --skip-src=true
 ```
 
 #### Skip the test files (only generate the class file)
 
 ```js
-grunt jse --class=Awesome.Module --skip-test
+grunt jse --class=Awesome.Module --skip-test=true
 ```
 
