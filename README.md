@@ -58,8 +58,8 @@ A string value that is used as a base path for the jasmine spec directory of the
 ### Default Options
 In this exemple, we generate files for the class named `Awesome.Module`
 
-1. Add this configuration in your Gruntfile.js (inside the
-	 `grunt.initConfig` block)
+- Add this configuration in your Gruntfile.js (inside the `grunt.initConfig` block)
+
 ```js
 grunt.initConfig({
   jse: {
@@ -71,7 +71,9 @@ grunt.initConfig({
   },
 })
 ```
-2. Type in the following command
+
+- Type in the following command
+
 ```js
 grunt jse --class=Awesome.Module
 ```
