@@ -78,7 +78,9 @@ grunt jse --class=Awesome.Module
 
 ### Command line options
 
-All those options are boolean, you should use `--singleton=true` instead of `--singleton` (there is a bug with the `nopt` module version in `grunt`).
+All those options are boolean, you should use `--singleton=true` instead
+of `--singleton` as long as there is a bug with the `nopt` module
+version (< 0.2) in `grunt`.
 
 #### Generate a singleton module
 
